@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AnrasLaboras</string>
+    <string name="btn_count_caption">Skaiciuoti</string>
+    <string name="teksto_ivedimas">Teksto ivedimas</string>
+    <string name="pasisveikinimas">Sveiki, iveskite teksta ir suskaiciuosiu</string>
+    <string name="simboliai">Simboliai</string>
+    <string-array name="Pasirinkimas">
+        <item>Simboliai</item>
+        <item>Zodziai</item>
+    </string-array>
+</resources>
