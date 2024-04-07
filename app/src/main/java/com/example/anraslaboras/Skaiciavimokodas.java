@@ -2,10 +2,22 @@ package com.example.anraslaboras;
 
 public class Skaiciavimokodas {
     public static int getCharsCount(String phrase){
-        return phrase.length();
+        if (phrase == null) {
+            return 0;
+        }
+            phrase = phrase.replaceAll("\\s", "");
+            return phrase.length();
     }
 
-    public int getWordsCount(String phrase){
-        return phrase.split("\\s+").length; // separate string around spaces;
-    }
+    public static int getWordsCount(String phrase){
+        if (phrase == null) {return 0;}
+            phrase = phrase.trim();
+            if (phrase.isEmpty()) {return 0;}
+            String[] words = phrase.split("\\s+");
+            int wordCount = 0;
+            for (String word : words) {
+                if (!word.isEmpty() && !word.matches("\\p{Punct}+")) {wordCount++;}
+            }
+            return wordCount;
+        }
 }
